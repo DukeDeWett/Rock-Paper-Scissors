@@ -1,0 +1,69 @@
+﻿Test Plan
+(Rock-Paper-Scissors Game)
+Prepared By: 
+(Norbert Wieczorek)
+(13.09.2022)
+ 
+Table of Contents
+ 
+Introduction.
+1.          Objectives. 
+2.          Scope. 
+3.          Assumptions / Risks. 
+3.1           Assumptions. 
+3.2           Risks. 
+4.          Test Environment. 
+5.        Manual Tests.
+Introduction
+The Test Plan has been created to communicate the test approach to team members. It includes the objectives, scope, schedule, risks and approach.  This document will clearly identify what the test deliverables will be and what is deemed in and out of scope.
+ 
+1.  Objectives
+Rock-Paper-Scissors(RPC) is an approach to a widely known game in text version where you play against AI. This tool is a new product written with Python. The whole test team is responsible for testing the product and ensuring it meets their needs.
+2. Scope
+Phase 1 of the test project will deliver Check Weather with functionality to create test cases and perform exploratory testing. 10 games for 3 rounds should be played. First game I will use only “Rock”, second game only “Paper” and the third one I will use only “Scissors”, then 5 games will be played with random inputs (those included in options). I will also make 2 additional tests for different values from the options stack and the last one will be a game where I play 6 times each time using “rock”.
+Phase 2 will use automated tests that will check if the computer's choices can be controlled and if they match the assertion.
+###For now those tests are made 3 times for each test when the computer chooses the same option, but later on I am planning to make more mixed tests.###
+3. Assumptions / Risks
+3.1. Assumptions
+1. Delivery of the product that it is in format that can be easily tested.
+ ### for now it was tested on Windows, tests on other operating systems are planned for later.###
+2. Tests should be run via CMD.
+3.2 Risks
+1. Those tests shouldn’t be made by people who are addicted to gambling. No more risks haven’t been noticed yet.
+4.Test Environment
+Tests are and should be performed on Windows 10 via CMD, they require stable internet connection.
+5. Test Cases:
+Half of all tests is performed on Windows 10 in PyCharm IDE via the “Run”         command. The second half is done via the CMD.
+
+
+1. Given - “rock”, “rock”, “rock”.
+When the computer played “scissors”, “scissors”, “rock”.
+Then I won 2:0 and after quitting I got a congratulation message.
+2. Given - “paper”, “paper”, “paper”.
+When the computer played “paper”, “paper”, “paper”.
+Then it was a draw and after quitting I got a congratulation message.
+3. Given - “scissors”, “scissors”, “scissors”.
+When the computer played “paper”, “scissors”, “scissors”.
+Then I won 1:0 and after quitting I got a congratulation message.
+4. Given - “rock”, “rock”, “scissors”.
+When the computer played “paper”, “rock”, “rock”.
+Then the computer won 2:0 and after quitting I got a “better luck next time” message.
+5. Given - “paper”, “scissors”, “paper”.
+When the computer played “scissors”, “rock”, “paper”.
+Then the computer won 2:0 and after quitting I got a “better luck next time” message.
+6. Given - “rock”, “scissors”, “scissors”.
+When the computer played “scissors”, “paper”, “rock”.
+Then I won 2:1 and after quitting I got a congratulation message.
+7. Given - “scissors”, “paper”, “paper”.
+When the computer played “scissors”, “scissors”, “paper”.
+Then the computer won 1:0 and after quitting I got a “better luck next time” message.
+8. Given - “paper”, “paper”, “scisors”.
+When the computer played “scissors”, “rock” and I was expecting this game to ask again for the correct output for the last one.
+Then it asked me again for the correct output then I quitted and it was a draw and I got a congratulation message.
+Additional conclusion - I made a mistake in spelling for the last word in order to see if this game will still be counted properly.
+9. Given - “boo”, “pper”, “scisors”.
+When expecting this game to ask again for the correct output.
+Then it asked me again for the correct output each time.
+10. Given - “rock”, “rock”, “rock”, “rock”, “rock”, “rock”, “rock”, “rock”, “rock”, “rock”.
+When the computer played “paper”, “rock”, “paper”, “rock”, “rock”, “scissors”, “scissors”, “rock”, “scissors”, “rock”.
+Then I won 4:2 and after quitting I got a congratulation message.
